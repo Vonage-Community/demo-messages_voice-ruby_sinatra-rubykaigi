@@ -1,0 +1,49 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dotenv (2.8.1)
+    erubis (2.7.0)
+    jwt (2.7.0)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.9)
+    phonelib (0.8.1)
+    puma (6.2.2)
+      nio4r (~> 2.0)
+    rack (2.2.6.4)
+    rack-protection (3.0.6)
+      rack
+    rexml (3.2.5)
+    ruby2_keywords (0.0.5)
+    sinatra (3.0.6)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.6)
+      tilt (~> 2.0)
+    sorbet-runtime (0.5.10792)
+    tilt (2.1.0)
+    vonage (7.9.0)
+      phonelib
+      rexml
+      sorbet-runtime (~> 0.5)
+      vonage-jwt (~> 0.1.0)
+      zeitwerk (~> 2, >= 2.2)
+    vonage-jwt (0.1.2)
+      jwt (~> 2)
+    zeitwerk (2.6.7)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  dotenv
+  erubis
+  puma
+  sinatra
+  vonage
+
+RUBY VERSION
+   ruby 3.0.0p0
+
+BUNDLED WITH
+   2.3.20

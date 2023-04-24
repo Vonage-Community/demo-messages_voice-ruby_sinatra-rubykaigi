@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vonage SMS API Demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="http://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <article class="form">
+      <h1>Vonage API Demo</h1>
+
+      <form action="/" method="post">
+        <label for="number">Number/番号</label>
+        <input type="text" name="number" placeholder="819000000000" required>
+
+				<fieldset>
+    			<legend>Select Language/言語を選択する</legend>
+					<div>
+						<input type="radio" id="en" name="language" value="en" checked>
+						<label for="en">English</label>
+					</div>
+					<div>
+						<input type="radio" id="jp" name="language" value="jp">
+						<label for="jp">日本語</label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+    			<legend>Select Mode/モードを選択</legend>
+					<div>
+						<input type="radio" id="sms" name="mode" value="sms" checked>
+						<label for="sms">SMS/メッセージ</label>
+					</div>
+					<div>
+						<input type="radio" id="voice" name="mode" value="voice">
+						<label for="voice">Voice/音声</label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+    			<legend>Tell me about/について教えてください</legend>
+					<div>
+						<input type="radio" id="vonage" name="topic" value="vonage" checked>
+						<label for="vonage">Vonage/ヴォナージュ</label>
+					</div>
+					<div>
+						<input type="radio" id="rubykaigi" name="topic" value="rubykaigi">
+						<label for="rubykaigi">RubyKaigi/ルビ会議</label>
+					</div>
+					<div>
+						<input type="radio" id="matsumoto" name="topic" value="matsumoto">
+						<label for="matsumoto">Matsumoto/松本</label>
+					</div>
+				</fieldset>
+
+        <input type="submit" value="Submit/送信">
+      </form>
+
+      <% if @status_message %>
+          <div class="flash-notice <%= @status_message[:class] %>">
+            <%= @status_message[:text] %>
+          </div>
+      <% end %>
+    </article>
+  </body>
+</html>
